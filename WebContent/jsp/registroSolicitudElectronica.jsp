@@ -7,7 +7,7 @@
 <title>Registro de Solicitudes Electr&oacute;nicas</title>
 <script src="a/js/libs/jquery/1.11.2/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="a/js/libs/bootstrap/3.3.2/css/bootstrap.min.css">
-<script src=" a/js/libs/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="a/js/libs/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="a/css/sigad/despaduanero2/solicitudelectronica/estilosSolElectronica.css">
 <script src="a/js/sigad/despaduanero2/solicitudelectronica/registroSolicitudElectronica.js"></script>
 </head>
