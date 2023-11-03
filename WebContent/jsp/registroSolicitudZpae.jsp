@@ -95,7 +95,7 @@
    <div class="row">
       <div class="col-sm-12">
          <div class="checkbox">
-            <label><input type="checkbox" id="chkDeclaroCumplir">Declaro cumplir con los requisitos se&ntilde;alados en el anexo II del procedimiento &quot;Importaci&oacute;n para el
+            <label><input type="checkbox" id="chkDeclaroZpae">Declaro cumplir con los requisitos se&ntilde;alados en el anexo II del procedimiento &quot;Importaci&oacute;n para el
                consumo&quot; DESPA-PG.01</label>
          </div>
       </div>

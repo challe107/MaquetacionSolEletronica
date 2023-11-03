@@ -100,6 +100,11 @@
             <div id="modalRequisitosSolicitudZpae" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
                <jsp:include page="modalRequisitosSolicitudZpae.jsp"></jsp:include>
             </div>
+            
+            <!-- SECCION DE REGISTRO DE SOLICITUD CEUS -->
+            <div id="registroSolicitudCeus" class="hidden">
+               <jsp:include page="registroSolicitudCeus.jsp"></jsp:include>
+            </div>
          </div>
          <!-- <div class="panel-footer"> -->
          <!-- Panel footer -->

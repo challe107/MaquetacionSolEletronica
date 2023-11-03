@@ -20,6 +20,10 @@ $(document).ready(function() {
          $("#botoneraRegistroSolicitud").addClass("hidden");
          $("#registroSolicitudZpae").removeClass("hidden");
          break;
+      case 'CEUS':
+         $("#botoneraRegistroSolicitud").addClass("hidden");
+         $("#registroSolicitudCeus").removeClass("hidden");
+         break;
       default:
          $("#botoneraRegistroSolicitud").removeClass("hidden");
          $("#registroSolicitudZpae").addClass("hidden");
@@ -35,12 +39,12 @@ $(document).ready(function() {
    /* registroSolicitudZpae.jsp */
    /** *********************************************************************************************************************** */
 
-   var chkDeclaroCumplir = $('#chkDeclaroCumplir');
+   var chkDeclaroZpae = $('#chkDeclaroZpae');
    var btnGrabarRegistroSolicitudZpae = $('#btnGrabarRegistroSolicitudZpae');
    var btnSalirRegistroSolicitudZpae = $('#btnSalirRegistroSolicitudZpae');
    var btnAceptarModalConfirmacionRegSolicitudZpae = $('#btnAceptarModalConfirmacionRegSolicitudZpae');
 
-   chkDeclaroCumplir.change(function() {
+   chkDeclaroZpae.change(function() {
       if ($(this).is(':checked')) {
          $('input[name="chkRequisitoZpae"]').prop("checked", false);
          $('#modalRequisitosSolicitudZpae').modal('show');
@@ -82,6 +86,30 @@ $(document).ready(function() {
    btnSalirrModalRequisitosSolicitudZpae.click(function() {
       $('#modalRequisitosSolicitudZpae').modal('hide');
    });
+   
+   /** *********************************************************************************************************************** */
+   /* registroSolicitudCeus.jsp */
+   /** *********************************************************************************************************************** */
+   
+   var btnGrabarRegistroSolicitudCeus = $('#btnGrabarRegistroSolicitudCeus');
+   var btnSalirRegistroSolicitudCeus = $('#btnSalirRegistroSolicitudCeus');
+   var btnAceptarModalConfirmacionRegSolicitudCeus = $('#btnAceptarModalConfirmacionRegSolicitudCeus');
+   
+   btnGrabarRegistroSolicitudCeus.click(function() {
+      console.log('GRABAR REGISTRO SOLICITUD CEUS');
+      $('#modalConfirmacionRegSolicitudCeus').modal('show');
+   });
+   
+   btnSalirRegistroSolicitudCeus.click(function() {
+      console.log('SALIR REGISTRO SOLICITUD CEUS');
+      $("#botoneraRegistroSolicitud").removeClass("hidden");
+      $("#registroSolicitudCeus").addClass("hidden");
+   });
+   
+   btnAceptarModalConfirmacionRegSolicitudCeus.click(function() {
+      $('#modalConfirmacionRegSolicitudCeus').modal('hide');
+   });
+   
 });
 
 /*
