@@ -11,6 +11,7 @@
 <script src="a/js/libs/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="a/css/sigad/despaduanero2/solicitudelectronica/estilosSolElectronica.css">
 <script src="a/js/sigad/despaduanero2/solicitudelectronica/registroSolicitudElectronica.js"></script>
+<script src="a/js/sigad/despaduanero2/solicitudelectronica/registroSolicitudSEPP.js"></script>
 </head>
 <body>
    <div class="container-fluid">
@@ -104,6 +105,11 @@
             <!-- SECCION DE REGISTRO DE SOLICITUD CEUS -->
             <div id="registroSolicitudCeus" class="hidden">
                <jsp:include page="registroSolicitudCeus.jsp"></jsp:include>
+            </div>
+
+            <!-- SECCION DE REGISTRO DE SOLICITUD SEPP -->
+             <div id="registroSolicitudSEPP" class="hidden">
+               <jsp:include page="registroSolicitudSEPP.jsp"></jsp:include>
             </div>
          </div>
          <!-- <div class="panel-footer"> -->

@@ -1,5 +1,5 @@
 /* Funciones Registro Solicitud Electronica - CUS 01*/
-$(document).ready(function() {
+$(document).ready(function () {
    /** *********************************************************************************************************************** */
    /* registroSolicitudElectronica.jsp */
    /** *********************************************************************************************************************** */
@@ -8,30 +8,34 @@ $(document).ready(function() {
    var btnContinuar = $('#btnContinuar');
    var btnSalir = $('#btnSalir');
 
-   cbTipoSolicitud.change(function() {
+   cbTipoSolicitud.change(function () {
       console.log('Tipo de solicitud seleccionada: ', $(this).val());
    });
 
-   btnContinuar.click(function() {
+   btnContinuar.click(function () {
       var tipoSolicitud = cbTipoSolicitud.val();
 
       switch (tipoSolicitud) {
-      case 'ZPAE':
-         $("#botoneraRegistroSolicitud").addClass("hidden");
-         $("#registroSolicitudZpae").removeClass("hidden");
-         break;
-      case 'CEUS':
-         $("#botoneraRegistroSolicitud").addClass("hidden");
-         $("#registroSolicitudCeus").removeClass("hidden");
-         break;
-      default:
-         $("#botoneraRegistroSolicitud").removeClass("hidden");
-         $("#registroSolicitudZpae").addClass("hidden");
-         break;
+         case 'ZPAE':
+            $("#botoneraRegistroSolicitud").addClass("hidden");
+            $("#registroSolicitudZpae").removeClass("hidden");
+            break;
+         case 'CEUS':
+            $("#botoneraRegistroSolicitud").addClass("hidden");
+            $("#registroSolicitudCeus").removeClass("hidden");
+            break;
+         case 'SEPP':
+            $("#botoneraRegistroSolicitud").addClass("hidden");
+            $("#registroSolicitudSEPP").removeClass("hidden");
+            break;
+         default:
+            $("#botoneraRegistroSolicitud").removeClass("hidden");
+            $("#registroSolicitudZpae").addClass("hidden");
+            break;
       }
    });
 
-   btnSalir.click(function() {
+   btnSalir.click(function () {
       console.log('SALIR');
    });
 
@@ -44,25 +48,25 @@ $(document).ready(function() {
    var btnSalirRegistroSolicitudZpae = $('#btnSalirRegistroSolicitudZpae');
    var btnAceptarModalConfirmacionRegSolicitudZpae = $('#btnAceptarModalConfirmacionRegSolicitudZpae');
 
-   chkDeclaroZpae.change(function() {
+   chkDeclaroZpae.change(function () {
       if ($(this).is(':checked')) {
          $('input[name="chkRequisitoZpae"]').prop("checked", false);
          $('#modalRequisitosSolicitudZpae').modal('show');
       }
    });
 
-   btnGrabarRegistroSolicitudZpae.click(function() {
+   btnGrabarRegistroSolicitudZpae.click(function () {
       console.log('GRABAR REGISTRO SOLICITUD ZPAE');
       $('#modalConfirmacionRegSolicitudZpae').modal('show');
    });
 
-   btnSalirRegistroSolicitudZpae.click(function() {
+   btnSalirRegistroSolicitudZpae.click(function () {
       console.log('SALIR REGISTRO SOLICITUD ZPAE');
       $("#botoneraRegistroSolicitud").removeClass("hidden");
       $("#registroSolicitudZpae").addClass("hidden");
    });
 
-   btnAceptarModalConfirmacionRegSolicitudZpae.click(function() {
+   btnAceptarModalConfirmacionRegSolicitudZpae.click(function () {
       $('#modalConfirmacionRegSolicitudZpae').modal('hide');
    });
 
@@ -73,9 +77,9 @@ $(document).ready(function() {
    var btnSeleccionarRequisitosSolicitudZpae = $('#btnSeleccionarRequisitosSolicitudZpae');
    var btnSalirrModalRequisitosSolicitudZpae = $('#btnSalirrModalRequisitosSolicitudZpae');
 
-   btnSeleccionarRequisitosSolicitudZpae.click(function() {
+   btnSeleccionarRequisitosSolicitudZpae.click(function () {
       var seleccionados = $('input[name="chkRequisitoZpae"]:checked');
-      var valoresSeleccionados = seleccionados.map(function() {
+      var valoresSeleccionados = seleccionados.map(function () {
          return this.value;
       }).get();
       console.log("chkRequisitoZpae seleccionados: " + valoresSeleccionados.join(', '));
@@ -83,33 +87,33 @@ $(document).ready(function() {
       $('#modalRequisitosSolicitudZpae').modal('hide');
    });
 
-   btnSalirrModalRequisitosSolicitudZpae.click(function() {
+   btnSalirrModalRequisitosSolicitudZpae.click(function () {
       $('#modalRequisitosSolicitudZpae').modal('hide');
    });
-   
+
    /** *********************************************************************************************************************** */
    /* registroSolicitudCeus.jsp */
    /** *********************************************************************************************************************** */
-   
+
    var btnGrabarRegistroSolicitudCeus = $('#btnGrabarRegistroSolicitudCeus');
    var btnSalirRegistroSolicitudCeus = $('#btnSalirRegistroSolicitudCeus');
    var btnAceptarModalConfirmacionRegSolicitudCeus = $('#btnAceptarModalConfirmacionRegSolicitudCeus');
-   
-   btnGrabarRegistroSolicitudCeus.click(function() {
+
+   btnGrabarRegistroSolicitudCeus.click(function () {
       console.log('GRABAR REGISTRO SOLICITUD CEUS');
       $('#modalConfirmacionRegSolicitudCeus').modal('show');
    });
-   
-   btnSalirRegistroSolicitudCeus.click(function() {
+
+   btnSalirRegistroSolicitudCeus.click(function () {
       console.log('SALIR REGISTRO SOLICITUD CEUS');
       $("#botoneraRegistroSolicitud").removeClass("hidden");
       $("#registroSolicitudCeus").addClass("hidden");
    });
-   
-   btnAceptarModalConfirmacionRegSolicitudCeus.click(function() {
+
+   btnAceptarModalConfirmacionRegSolicitudCeus.click(function () {
       $('#modalConfirmacionRegSolicitudCeus').modal('hide');
    });
-   
+
 });
 
 /*
@@ -128,4 +132,4 @@ $(document).ready(function() {
  * 
  * $('#frmBusquedaSolElectronica').attr("action", URL);
  * $('#frmBusquedaSolElectronica').submit(); //flujo para CUS01.01 }
- */
+ *//* Funciones Registro Solicitud Electronica - CUS 01*/
