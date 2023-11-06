@@ -106,6 +106,11 @@
             <div id="registroSolicitudCeus" class="hidden">
                <jsp:include page="registroSolicitudCeus.jsp"></jsp:include>
             </div>
+            
+            <!-- SECCION DE REGISTRO DE SOLICITUD SESP -->
+            <div id="registroSolicitudSesp" class="hidden">
+               <jsp:include page="registroSolicitudSesp.jsp"></jsp:include>
+            </div>
 
             <!-- SECCION DE REGISTRO DE SOLICITUD SEPP -->
              <div id="registroSolicitudSEPP" class="hidden">

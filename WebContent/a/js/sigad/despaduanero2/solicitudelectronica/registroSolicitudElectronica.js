@@ -16,22 +16,26 @@ $(document).ready(function () {
       var tipoSolicitud = cbTipoSolicitud.val();
 
       switch (tipoSolicitud) {
-         case 'ZPAE':
-            $("#botoneraRegistroSolicitud").addClass("hidden");
-            $("#registroSolicitudZpae").removeClass("hidden");
-            break;
-         case 'CEUS':
-            $("#botoneraRegistroSolicitud").addClass("hidden");
-            $("#registroSolicitudCeus").removeClass("hidden");
-            break;
-         case 'SEPP':
-            $("#botoneraRegistroSolicitud").addClass("hidden");
-            $("#registroSolicitudSEPP").removeClass("hidden");
-            break;
-         default:
-            $("#botoneraRegistroSolicitud").removeClass("hidden");
-            $("#registroSolicitudZpae").addClass("hidden");
-            break;
+      case 'ZPAE':
+         $("#botoneraRegistroSolicitud").addClass("hidden");
+         $("#registroSolicitudZpae").removeClass("hidden");
+         break;
+      case 'CEUS':
+         $("#botoneraRegistroSolicitud").addClass("hidden");
+         $("#registroSolicitudCeus").removeClass("hidden");
+         break;
+      case 'SESP':
+         $("#botoneraRegistroSolicitud").addClass("hidden");
+         $("#registroSolicitudSesp").removeClass("hidden");
+         break;
+      case 'SEPP':
+         $("#botoneraRegistroSolicitud").addClass("hidden");
+         $("#registroSolicitudSEPP").removeClass("hidden");
+         break;
+      default:
+         $("#botoneraRegistroSolicitud").removeClass("hidden");
+         $("#registroSolicitudZpae").addClass("hidden");
+         break;
       }
    });
 
@@ -114,6 +118,29 @@ $(document).ready(function () {
       $('#modalConfirmacionRegSolicitudCeus').modal('hide');
    });
 
+   /** *********************************************************************************************************************** */
+   /* registroSolicitudSesp.jsp */
+   /** *********************************************************************************************************************** */
+
+   var btnGrabarRegistroSolicitudSesp = $('#btnGrabarRegistroSolicitudSesp');
+   var btnSalirRegistroSolicitudSesp = $('#btnSalirRegistroSolicitudSesp');
+   var btnAceptarModalConfirmacionRegSolicitudSesp = $('#btnAceptarModalConfirmacionRegSolicitudSesp');
+
+   btnGrabarRegistroSolicitudSesp.click(function () {
+      console.log('GRABAR REGISTRO SOLICITUD SESP');
+      $('#modalConfirmacionRegSolicitudSesp').modal('show');
+   });
+
+   btnSalirRegistroSolicitudSesp.click(function () {
+      console.log('SALIR REGISTRO SOLICITUD SESP');
+      $("#botoneraRegistroSolicitud").removeClass("hidden");
+      $("#registroSolicitudSesp").addClass("hidden");
+   });
+
+   btnAceptarModalConfirmacionRegSolicitudSesp.click(function () {
+      $('#modalConfirmacionRegSolicitudSesp').modal('hide');
+   });
+
 });
 
 /*
@@ -132,4 +159,4 @@ $(document).ready(function () {
  * 
  * $('#frmBusquedaSolElectronica').attr("action", URL);
  * $('#frmBusquedaSolElectronica').submit(); //flujo para CUS01.01 }
- *//* Funciones Registro Solicitud Electronica - CUS 01*/
+ *//* Funciones Registro Solicitud Electronica - CUS 01 */
